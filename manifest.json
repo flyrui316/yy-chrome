@@ -1,0 +1,31 @@
+{
+	"manifest_version": 2,
+	"name": "yy helper",
+	"version": "1.0",
+	"description": "auto login yy",
+	"icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+	"browser_action": {
+		"default_icon": {
+            "19": "images/icon19.png",
+            "38": "images/icon38.png"
+        },
+		"default_title": "yy helper"
+	},
+
+    "content_scripts": [
+		{
+		  "matches": ["https://aq.yy.com/*","https://lgn.yy.com/*","https://ylog.hiido.com/*"],
+		  "css": ["main.css"],
+		  "js": ["main.js"]
+		}
+	],
+	"permissions": [
+        "https://aq.yy.com/",
+        "https://hq.sinajs.cn/list=*",
+        "https://lgn.yy.com/" 
+    ]
+}
